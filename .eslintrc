@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "NodeJS": true
+  },
+  "rules": {
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^(_\\\\w+)$",
+        "argsIgnorePattern": "^(_\\\\w+)$",
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}
